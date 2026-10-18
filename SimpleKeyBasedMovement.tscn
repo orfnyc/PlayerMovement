@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4hdr8go2ybyr"]
+
+[ext_resource type="Script" uid="uid://bvkf4jp01jamb" path="res://SimpleKeyBasedMovement.gd" id="1_mr21e"]
+
+[node name="SimpleKeyBasedMovement" type="Node" unique_id=847318103]
+script = ExtResource("1_mr21e")

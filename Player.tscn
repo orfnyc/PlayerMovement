@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bu33xw2vjxjep"]
+
+[ext_resource type="Script" uid="uid://bkj85k4gt2ld6" path="res://Player.gd" id="1_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://4hdr8go2ybyr" path="res://SimpleKeyBasedMovement.tscn" id="2_kne1u"]
+[ext_resource type="Texture2D" uid="uid://dtm6a6nxhx1qk" path="res://icon.svg" id="3_kne1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms1oj"]
+size = Vector2(128, 128.25)
+
+[node name="Player" type="CharacterBody2D" unique_id=624199145]
+script = ExtResource("1_kpjcp")
+
+[node name="SimpleKeyBasedMovement" parent="." unique_id=847318103 instance=ExtResource("2_kne1u")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1547773715]
+texture = ExtResource("3_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=848233738]
+position = Vector2(0, -0.125)
+shape = SubResource("RectangleShape2D_ms1oj")
+
+[connection signal="velocity_update" from="SimpleKeyBasedMovement" to="." method="_on_velocity_update"]
