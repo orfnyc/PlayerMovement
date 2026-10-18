@@ -20,3 +20,4 @@ func _input(event: InputEvent) -> void:
 		velocity.y += 1
 	velocity = SPEED * velocity.normalized()
 	velocity_update.emit(velocity)
+	
